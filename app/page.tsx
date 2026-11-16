@@ -6,43 +6,11 @@ import { useLanguage } from "./components/language-provider";
 import Image from "next/image";
 import ResumeSelector from "./components/resume-selector";
 import SkillsGallery from "./components/skills-gallery";
+import ProjectGallery from "./components/project-gallery";
 
 export default function Home() {
   const { language } = useLanguage();
   const es = language === "es";
-
-  const projects = [
-    {
-      title: "Gema Brillante",
-      typeEs: "Plataforma web para rol",
-      typeEn: "Roleplay web platform",
-      descriptionEs:
-        "Proyecto full-stack para una comunidad de rol con perfiles, publicaciones, cartas, rumores, sesiones y permisos.",
-      descriptionEn:
-        "Full-stack project for a roleplay community with profiles, posts, letters, rumors, sessions and permissions.",
-      stack: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
-    },
-    {
-      title: "Moonveil",
-      typeEs: "Portafolio personal",
-      typeEn: "Personal portfolio",
-      descriptionEs:
-        "Mi espacio personal para mostrar proyectos, experiencia, servicios y estilo como desarrolladora frontend.",
-      descriptionEn:
-        "My personal space to showcase projects, experience, services and my style as a frontend developer.",
-      stack: ["Next.js", "TypeScript", "Responsive Design"],
-    },
-    {
-      title: "Concept Project",
-      typeEs: "Proyecto conceptual",
-      typeEn: "Concept project",
-      descriptionEs:
-        "Espacio reservado para un futuro proyecto visual que amplíe mi portafolio profesional.",
-      descriptionEn:
-        "Reserved space for a future visual project that expands my professional portfolio.",
-      stack: ["UI Design", "Frontend", "Creative Direction"],
-    },
-  ];
 
   const experience = [
     {
@@ -273,46 +241,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="content-section alt-section">
+      <section
+        id="projects"
+        className="content-section alt-section"
+      >
         <div className="section-heading">
           <span className="eyebrow">
             03 — {es ? "PROYECTOS" : "PROJECTS"}
           </span>
-          <h2>{es ? "Proyectos destacados" : "Selected projects"}</h2>
+
+          <h2>
+            {es ? "Proyectos destacados" : "Selected projects"}
+          </h2>
         </div>
 
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <article key={project.title} className="project-card">
-              <div className="project-preview">
-                <span className="project-preview-label">
-                  {project.title}
-                </span>
-              </div>
-
-              <div className="project-content">
-                <div className="project-header">
-                  <h3>{project.title}</h3>
-                  <span>
-                    {es ? project.typeEs : project.typeEn}
-                  </span>
-                </div>
-
-                <p>
-                  {es
-                    ? project.descriptionEs
-                    : project.descriptionEn}
-                </p>
-
-                <div className="stack-list">
-                  {project.stack.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ProjectGallery />
       </section>
 
       <section id="skills" className="content-section">
@@ -398,30 +341,41 @@ export default function Home() {
         </div>
 
         <div className="contact-grid">
-          <div className="contact-card">
-            <Mail size={18} />
-            <div>
-              <span>Email</span>
-              <p>kdbaron624@gmail.com</p>
-            </div>
-          </div>
+  <a
+    href="mailto:kdbaron426@gmail.com"
+    className="contact-card"
+  >
+    <Mail size={20} />
+    <div>
+      <span>Email</span>
+      <p>kdbaron426@gmail.com</p>
+    </div>
+    <ArrowUpRight size={16} className="contact-arrow" />
+  </a>
 
-          <div className="contact-card">
-            <Code2 size={18} />
-            <div>
-              <span>GitHub</span>
-              <p>github.com/Hela426</p>
-            </div>
-          </div>
+  <a
+    href="https://github.com/Hela426"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-card"
+  >
+    <Code2 size={20} />
+    <div>
+      <span>GitHub</span>
+      <p>Hela426</p>
+    </div>
+    <ArrowUpRight size={16} className="contact-arrow" />
+  </a>
 
-          <div className="contact-card">
-            <Globe size={18} />
-            <div>
-              <span>{es ? "Portafolio" : "Portfolio"}</span>
-              <p>{es ? "Disponible pronto" : "Coming soon"}</p>
-            </div>
-          </div>
-        </div>
+  <a href="#resume" className="contact-card">
+    <Globe size={20} />
+    <div>
+      <span>{es ? "Perfil profesional" : "Professional profile"}</span>
+      <p>{es ? "Descargar mi CV" : "Download my resume"}</p>
+    </div>
+    <ArrowUpRight size={16} className="contact-arrow" />
+  </a>
+</div>
       </section>
     </main>
   );

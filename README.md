@@ -50,7 +50,7 @@ projects and personality.
 Clone the repository:
 
 ```bash
-git clone https://github.com/KDBaron426/karen-personal-portfolio.git
+git clone https://github.com/Hela426/karen-personal-portfolio.git
 cd karen-personal-portfolio
 npm install
 npm run dev

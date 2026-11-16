@@ -1290,3 +1290,448 @@ a {
     transform: none;
   }
 }
+
+/* ── PROFESSIONAL PROJECT GALLERY ── */
+
+.project-gallery-count {
+  margin-bottom: 24px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.portfolio-project {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+  animation: entrance 400ms ease both;
+}
+
+.portfolio-project-image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-project-image img {
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(1);
+  transition: transform 500ms ease, filter 500ms ease;
+}
+
+.portfolio-project:hover .portfolio-project-image img,
+.portfolio-project:focus-within .portfolio-project-image img {
+  transform: scale(1.04);
+  filter: grayscale(0);
+}
+
+.project-status {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.portfolio-project-content {
+  padding: 26px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.portfolio-project-content h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 16px 0;
+  line-height: 1.1;
+}
+
+.portfolio-project-content p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.project-details-button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: var(--foreground);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+.project-details-button svg {
+  transition: transform 250ms ease;
+}
+
+.project-details-button .rotated {
+  transform: rotate(180deg);
+}
+
+.project-details {
+  padding: 20px 0;
+}
+
+.project-details h4 {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.project-details ul {
+  display: grid;
+  gap: 12px;
+  padding-left: 18px;
+  list-style: disc;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  font-size: 12px;
+  transition: background 200ms, color 200ms;
+}
+
+.project-links a:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.empty-projects {
+  padding: 65px 20px;
+  border: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.empty-projects h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 32px;
+}
+
+.empty-projects p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .project-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-project-content {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-project,
+  .portfolio-project-image img,
+  .project-details-button svg {
+    transition: none;
+    animation: none;
+  }
+
+  .portfolio-project:hover .portfolio-project-image img,
+  .portfolio-project:focus-within .portfolio-project-image img {
+    transform: none;
+  }
+}
+
+/* =========================================
+   PROJECT GALLERY
+========================================= */
+
+.project-gallery {
+  width: 100%;
+}
+
+.project-gallery-count {
+  margin-bottom: 24px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.portfolio-project {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 250ms ease;
+}
+
+.portfolio-project:hover {
+  border-color: var(--foreground);
+}
+
+.portfolio-project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-project-image img {
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(1);
+  transition: filter 500ms ease, transform 500ms ease;
+}
+
+.portfolio-project:hover .portfolio-project-image img {
+  filter: grayscale(0);
+  transform: scale(1.035);
+}
+
+.project-status {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 8px 12px;
+  background: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.portfolio-project-content {
+  padding: 26px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.portfolio-project-content h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 16px 0;
+}
+
+.portfolio-project-content p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.project-details-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px 0;
+  background: transparent;
+  color: var(--foreground);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.project-details-button svg {
+  transition: transform 250ms ease;
+}
+
+.project-details-button .rotated {
+  transform: rotate(180deg);
+}
+
+.project-details {
+  padding: 24px 0;
+}
+
+.project-details[hidden] {
+  display: none;
+}
+
+.project-details h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.project-details ul {
+  display: grid;
+  gap: 12px;
+  padding-left: 20px;
+  list-style: disc;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  transition: background 200ms, color 200ms;
+}
+
+.project-links a:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.empty-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 65px 20px;
+  border: 1px dashed var(--border);
+  text-align: center;
+}
+
+.empty-projects h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 32px;
+}
+
+.empty-projects p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .project-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-project-content {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-project-image img,
+  .project-details-button svg {
+    transition: none;
+  }
+
+  .portfolio-project:hover .portfolio-project-image img {
+    transform: none;
+  }
+}
+
+/* ── INTERACTIVE CONTACT CARDS ── */
+
+.contact-card {
+  position: relative;
+  transition:
+    border-color 200ms ease,
+    background 200ms ease,
+    transform 200ms ease;
+}
+
+.contact-card:hover {
+  border-color: var(--foreground);
+  background: var(--surface-2);
+  transform: translateY(-3px);
+}
+
+.contact-card > svg {
+  flex-shrink: 0;
+}
+
+.contact-card div {
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-card p {
+  overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+  opacity: .5;
+  transition: transform 200ms ease;
+}
+
+.contact-card:hover .contact-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card,
+  .contact-arrow {
+    transition: none;
+  }
+
+  .contact-card:hover,
+  .contact-card:hover .contact-arrow {
+    transform: none;
+  }
+}
