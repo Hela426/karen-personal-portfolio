@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 280">
+
+  <rect width="900" height="280"
+        rx="12" fill="#101010"/>
+
+  <rect x="18" y="18" width="864" height="244"
+        rx="6" fill="none" stroke="#333333"/>
+
+  <text x="65" y="65"
+        fill="#999999" font-family="monospace"
+        font-size="12" letter-spacing="4">
+    PERSONAL PORTFOLIO / 2026
+  </text>
+
+  <text x="60" y="145"
+        fill="#ffffff" font-family="Georgia, serif"
+        font-size="74" font-style="italic">
+    Karen.
+  </text>
+
+  <text x="65" y="185"
+        fill="#dddddd" font-family="Arial, sans-serif"
+        font-size="17" letter-spacing="2">
+    FRONTEND DEVELOPER
+  </text>
+
+  <text x="65" y="228"
+        fill="#888888" font-family="monospace"
+        font-size="13">
+    Code. Creativity. Cats.
+  </text>
+
+  <g transform="translate(630 30)">
+    <g fill="#ffffff">
+      <path d="M155 202 C226 226 233 153 199 168"
+            fill="none" stroke="#ffffff"
+            stroke-width="15" stroke-linecap="round"/>
+
+      <ellipse cx="120" cy="164" rx="48" ry="53"/>
+
+      <path d="M59 87 L55 22 Q57 16 65 21
+               L100 49 Q119 43 141 49
+               L176 21 Q183 16 185 25
+               L182 89 Q193 135 151 142
+               Q113 159 77 137 Q50 122 59 87Z"/>
+
+      <ellipse cx="91" cy="206" rx="23" ry="12"/>
+      <ellipse cx="144" cy="206" rx="23" ry="12"/>
+    </g>
+
+    <g fill="#101010">
+      <ellipse cx="91" cy="90" rx="6" ry="10"/>
+      <ellipse cx="148" cy="90" rx="6" ry="10"/>
+      <path d="M114 106 Q120 102 126 106 L120 112Z"/>
+    </g>
+  </g>
+
+</svg>

@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Karen — Personal Portfolio](./assets/banner.svg)
+<div align="center">
 
-## Getting Started
+# KAREN — PERSONAL PORTFOLIO
 
-First, run the development server:
+### Frontend Developer & Creative Web Designer
+
+ฅ^•ﻌ•^ฅ
+
+*Code, design and a little bit of magic.*
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-171717?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-262626?style=for-the-badge&logo=react&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-404040?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+</div>
+
+---
+
+## About the project
+
+A personal portfolio designed and developed to showcase
+my professional experience, technical skills, creative
+projects and personality.
+
+## Features
+
+- Responsive design
+- Light and dark mode
+- Spanish and English support
+- Persistent user preferences
+- Professional experience timeline
+- Project showcase
+- Freelance services
+- Interactive feline companion
+
+## Technologies
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React
+- Next Themes
+- Git & GitHub
+
+## Getting started
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/KDBaron426/karen-personal-portfolio.git
+cd karen-personal-portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [x] Project initialization
+- [x] Visual identity
+- [x] Responsive layout
+- [x] Dark and light mode
+- [x] Internationalization
+- [x] Interactive cat companion
+- [ ] Custom illustration
+- [ ] Interactive project gallery
+- [ ] Downloadable resume
+- [ ] Production deployment
 
-## Learn More
+## Developer
 
-To learn more about Next.js, take a look at the following resources:
+**Karen Baron**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Frontend Developer & Creative Web Designer  
+Based in Colombia.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+<div align="center">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Designed and developed with love.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Supervised by Molly, the feline assistant.**
+
+🐈‍⬛
+
+© 2026 Karen Baron — Personal Portfolio
+
+</div>
