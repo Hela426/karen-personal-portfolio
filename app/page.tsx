@@ -3,6 +3,7 @@
 import { ArrowUpRight, Mail, Code2, Globe } from "lucide-react";
 import Kamon from "./components/kamon";
 import { useLanguage } from "./components/language-provider";
+import Image from "next/image";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -188,29 +189,40 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-card">
-            <div className="portrait-card">
+                    <div className="hero-card">
+            <figure className="portrait-card">
               <div className="portrait-top">
                 <span className="portrait-label">
-                  {es ? "ILUSTRACIÓN PERSONALIZADA" : "CUSTOM ILLUSTRATION"}
+                  {es ? "UN PEQUEÑO RINCÓN DE MI VIDA" : "A LITTLE PIECE OF MY LIFE"}
                 </span>
                 <Kamon size={28} />
               </div>
 
-              <div className="portrait-placeholder">
-                <div className="cat-face">
-                  <span className="cat-ears">▲ ▲</span>
-                  <span className="cat-eyes">• •</span>
-                  <span className="cat-nose">ᴥ</span>
-                </div>
+              <div className="portrait-image">
+                <Image
+                  src="/images/karen-molly.png"
+                  alt={
+                    es
+                      ? "Ilustración en acuarela de Karen y su gata Molly"
+                      : "Watercolor illustration of Karen and her cat Molly"
+                  }
+                  width={1086}
+                  height={1448}
+                  priority
+                  sizes="(max-width: 1100px) 90vw, 420px"
+                  className="personal-illustration"
+                />
               </div>
 
-              <p className="portrait-note">
-                {es
-                  ? "Aquí colocaremos tu ilustración personalizada más adelante."
-                  : "We will place your custom illustration here later."}
-              </p>
-            </div>
+              <figcaption className="portrait-note">
+                <span>Karen & Molly.</span>
+                <small>
+                  {es
+                    ? "Desarrolladora y supervisora oficial del código."
+                    : "Developer and official code supervisor."}
+                </small>
+              </figcaption>
+            </figure>
           </div>
         </div>
 

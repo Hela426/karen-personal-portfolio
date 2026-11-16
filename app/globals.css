@@ -906,3 +906,84 @@ a {
     animation: none;
   }
 }
+
+/* ── PERSONAL WATERCOLOR PORTRAIT ── */
+
+.portrait-card {
+  margin: 0;
+}
+
+.portrait-image {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  aspect-ratio: 3 / 4;
+}
+
+.personal-illustration {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.portrait-image:hover .personal-illustration {
+  transform: scale(1.035);
+}
+
+.portrait-note {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.portrait-note span {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 26px;
+  font-style: italic;
+  color: var(--foreground);
+}
+
+.portrait-note small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+[data-theme="dark"] .personal-illustration {
+  filter: brightness(.88);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-illustration {
+    transition: none;
+  }
+
+  .portrait-image:hover .personal-illustration {
+    transform: none;
+  }
+}
+
+/* ── MOLLY'S LITTLE HEART ── */
+
+.molly-heart {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: molly-heart 1.5s ease-in-out infinite;
+}
+
+@keyframes molly-heart {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .molly-heart {
+    animation: none;
+  }
+}
