@@ -4,6 +4,7 @@ import { ArrowUpRight, Mail, Code2, Globe } from "lucide-react";
 import Kamon from "./components/kamon";
 import { useLanguage } from "./components/language-provider";
 import Image from "next/image";
+import ResumeSelector from "./components/resume-selector";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -181,6 +182,10 @@ export default function Home() {
               <a href="#projects" className="primary-button">
                 {es ? "Ver proyectos" : "View projects"}
                 <ArrowUpRight size={18} />
+              </a>
+
+              <a href="#resume" className="secondary-button">
+                {es ? "Mi CV" : "My resume"}
               </a>
 
               <a href="#contact" className="secondary-button">
@@ -383,6 +388,20 @@ export default function Home() {
             </article>
           ))}
         </div>
+      </section>
+
+            <section id="resume" className="content-section">
+        <div className="section-heading">
+          <span className="eyebrow">
+            {es ? "CURRICULUM VITAE" : "RESUME"}
+          </span>
+
+          <h2>
+            {es ? "Mi perfil profesional" : "My professional profile"}
+          </h2>
+        </div>
+
+        <ResumeSelector />
       </section>
 
       <section id="contact" className="content-section alt-section">

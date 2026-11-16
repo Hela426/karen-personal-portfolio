@@ -987,3 +987,112 @@ a {
     animation: none;
   }
 }
+
+/* ── RESUME SELECTOR ── */
+
+.resume-selector {
+  width: 100%;
+  max-width: 540px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.resume-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resume-selector h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.resume-description {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.resume-options {
+  display: grid;
+  gap: 12px;
+}
+
+.resume-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  text-align: left;
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  transition: background 200ms ease;
+}
+
+.resume-option span {
+  flex: 1;
+  font-size: 13px;
+}
+
+.resume-option:hover,
+.resume-option.selected {
+  background: var(--surface-2);
+  border-color: var(--foreground);
+}
+
+.resume-languages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border);
+  margin: 22px 0;
+}
+
+.resume-languages button {
+  padding: 12px;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 12px;
+}
+
+.resume-languages button.selected {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.resume-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  background: var(--foreground);
+  color: var(--background);
+  border: 1px solid var(--foreground);
+  font-size: 13px;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.resume-download:hover {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.resume-molly {
+  margin: 18px 0 0;
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .resume-selector {
+    padding: 20px;
+  }
+}

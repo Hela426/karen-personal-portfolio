@@ -19,6 +19,7 @@ export default function Navbar() {
     { href: "#skills", es: "Habilidades", en: "Skills" },
     { href: "#experience", es: "Experiencia", en: "Experience" },
     { href: "#services", es: "Servicios", en: "Services" },
+    { href: "#resume", es: "Mi CV", en: "Resume" },
     { href: "#contact", es: "Contacto", en: "Contact" },
   ];
 

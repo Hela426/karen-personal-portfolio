@@ -1,10 +1,9 @@
 "use client";
 
 import Kamon from "./kamon";
-import { useLanguage } from "./language-provider";
 
 export default function Footer() {
-  const { language } = useLanguage();
+
 
   return (
     <footer className="site-footer">
