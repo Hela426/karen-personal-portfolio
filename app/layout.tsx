@@ -9,6 +9,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import CatCompanion from "./components/cat-companion";
 
+import "devicon/devicon.min.css";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({

@@ -5,6 +5,7 @@ import Kamon from "./components/kamon";
 import { useLanguage } from "./components/language-provider";
 import Image from "next/image";
 import ResumeSelector from "./components/resume-selector";
+import SkillsGallery from "./components/skills-gallery";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -41,21 +42,6 @@ export default function Home() {
         "Reserved space for a future visual project that expands my professional portfolio.",
       stack: ["UI Design", "Frontend", "Creative Direction"],
     },
-  ];
-
-  const skills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Node.js",
-    "Git",
-    "Supabase",
-    "Figma",
-    "Responsive Design",
   ];
 
   const experience = [
@@ -334,16 +320,15 @@ export default function Home() {
           <span className="eyebrow">
             04 — {es ? "HABILIDADES" : "SKILLS"}
           </span>
-          <h2>{es ? "Tecnologías y herramientas" : "Technologies & tools"}</h2>
+
+          <h2>
+            {es
+              ? "Tecnologías y herramientas"
+              : "Technologies & tools"}
+          </h2>
         </div>
 
-        <div className="chips">
-          {skills.map((skill) => (
-            <span key={skill} className="chip">
-              {skill}
-            </span>
-          ))}
-        </div>
+        <SkillsGallery />
       </section>
 
       <section id="experience" className="content-section alt-section">
