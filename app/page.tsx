@@ -227,7 +227,7 @@ export default function Home() {
         </div>
 
         <div className="hero-bottom">
-          <span>MONOCHROME · MINIMAL · PERSONAL</span>
+          <span></span>
           <span>01 — 07</span>
         </div>
       </section>

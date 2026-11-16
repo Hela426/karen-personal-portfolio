@@ -10,17 +10,10 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-brand">
         <Kamon size={28} />
-        <span>KAREN — PERSONAL PORTFOLIO</span>
       </div>
 
-      <p className="footer-tagline">
-        {language === "es"
-          ? "Código, diseño y personalidad."
-          : "Code, design and personality."}
-      </p>
-
       <p className="footer-copyright">
-        © 2026 Karen · Moonveil Portfolio
+        © 2026 Karen Baron · Moonveil Portfolio
       </p>
     </footer>
   );
