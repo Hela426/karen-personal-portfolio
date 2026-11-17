@@ -7,13 +7,15 @@ import {
   ArrowUpRight,
   Code,
   PawPrint,
-  ChevronDown,
 } from "lucide-react";
 
 import {
   projects,
   type ProjectCategory,
+  type Project,
 } from "../data/projects";
+
+import ProjectModal from "./project-modal";
 
 import { useLanguage } from "./language-provider";
 
@@ -25,9 +27,7 @@ export default function ProjectGallery() {
 
   const [filter, setFilter] = useState<Filter>("all");
 
-  const [expanded, setExpanded] = useState<
-    string | null
-  >(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filters: {
     id: Filter;
@@ -65,7 +65,7 @@ export default function ProjectGallery() {
             }`}
             onClick={() => {
               setFilter(item.id);
-              setExpanded(null);
+              setSelectedProject(null);
             }}
           >
             {item.label}
@@ -78,7 +78,7 @@ export default function ProjectGallery() {
         aria-live="polite"
       >
         {visibleProjects.length}{" "}
-        {es ? "proyectos" : "projects"}
+        {visibleProjects.length === 1 ? (es ? "proyecto" : "project") : (es ? "proyectos" : "projects")}
       </div>
 
       <div className="project-gallery-grid">
@@ -119,45 +119,12 @@ export default function ProjectGallery() {
               <button
                 type="button"
                 className="project-details-button"
-                aria-expanded={expanded === project.id}
-                aria-controls={`details-${project.id}`}
-                onClick={() =>
-                  setExpanded(
-                    expanded === project.id
-                      ? null
-                      : project.id
-                  )
-                }
+                aria-haspopup="dialog"
+                onClick={() => setSelectedProject(project)}
               >
                 {es ? "Ver detalles" : "View details"}
-
-                <ChevronDown
-                  size={18}
-                  className={
-                    expanded === project.id
-                      ? "rotated"
-                      : ""
-                  }
-                />
+                <ArrowUpRight size={18} />
               </button>
-
-              <div
-                id={`details-${project.id}`}
-                hidden={expanded !== project.id}
-                className="project-details"
-              >
-                <h4>
-                  {es ? "Funcionalidades" : "Features"}
-                </h4>
-
-                <ul>
-                  {project.features[language].map(
-                    (feature) => (
-                      <li key={feature}>{feature}</li>
-                    )
-                  )}
-                </ul>
-              </div>
 
               <div className="project-links">
                 {project.github && (
@@ -201,6 +168,14 @@ export default function ProjectGallery() {
               : "New projects are coming to this category soon."}
           </p>
         </div>
+      )}
+      {selectedProject && (
+        <ProjectModal
+          key={selectedProject.id}
+          project={selectedProject}
+          language={language}
+          onClose={() => setSelectedProject(null)}
+        />
       )}
     </div>
   );
